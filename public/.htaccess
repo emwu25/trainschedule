@@ -1,0 +1,12 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule     ^schedule/?$    index.php    [NC,L]    # Handle requests for "schedule"
+
+RewriteRule     ^schedule/upload(.*)$          upload_schedule.php$1   [NC,L]
+RewriteRule     ^schedule/([0-9]+)/delete$ delete_schedule.php?schedule=$1 [NC,L]
+RewriteRule     ^schedule/create$          presist_schedules.php [NC,L]
+
+RewriteCond     %{REQUEST_METHOD} ^GET$   [NC]
+RewriteRule     ^schedule/([0-9]+)/?$     get_details.php?schedule=$1   [NC,L]
+
+RewriteCond     %{REQUEST_METHOD} ^POST$   [NC]
+RewriteRule     ^schedule/([0-9]+)/?$     update_schedule.php?schedule=$1   [NC,L]

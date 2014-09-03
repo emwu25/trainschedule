@@ -1,0 +1,25 @@
+{
+    "name": "MikeWu/TrainSchedule",
+    "description": "Sample Test Schedule Application",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Maciej Warchalowski",
+            "email": "mwarchalowski@gmail.com"
+        }
+    ],
+    "require": {
+
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "MikeWu\\Schedule":        "app/",
+            "MikeWu\\Schedule\\Tests": "app/"
+        }
+    }
+
+}
